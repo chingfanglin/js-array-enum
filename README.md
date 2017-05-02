@@ -4,12 +4,12 @@
 
 # Introduction
 
-	Enum is a javascript module that introduces the Enum Type. It works for node.js and in the browser.
-	Enumerate function in Array prototype.
+Enum is a javascript module that introduces the Enum Type. It works for node.js and in the browser.
+Enumerate function in Array prototype.
 
 # Dependencies
 
-	No dependencies!
+No dependencies!
 
 # Installation (node.js)
 

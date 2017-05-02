@@ -35,7 +35,12 @@ function getEnumValue() {
                 var value = element[k];
                 itemList.forEach(function(data) {
                     if (Object.prototype.toString.call(value) === '[object Array]') {
-                      if (!value.indexOf("" + data)) {
+                        // lmplicit conversion string number
+                        var result = value.find(function(e) {
+                            return e == data
+                        })
+
+                        if (result !== void 0) {
                             returnArray.push(key);
                         } else if (data == key) {
                             returnArray.push(value);
