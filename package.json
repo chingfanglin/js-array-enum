@@ -6,6 +6,10 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "",
+  "homepage": "https://github.com/chingfanglin/js-array-enum",
+  "bugs": {
+    "url": "https://github.com/chingfanglin/js-array-enum/issues"
+  },
+  "author": "chingfanglin",
   "license": "ISC"
 }

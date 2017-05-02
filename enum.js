@@ -37,7 +37,7 @@ function getEnumValue() {
                     if (Object.prototype.toString.call(value) === '[object Array]') {
                       if (!value.indexOf("" + data)) {
                             returnArray.push(key);
-                        } else if (data  key) {
+                        } else if (data == key) {
                             returnArray.push(value);
                         }
                     } else if (data == key) {
