@@ -18,7 +18,7 @@ module.exports = Array.prototype.getEnumValue = function() {
                 var value = element[k];
                 itemList.forEach(function(data) {
                     if (Object.prototype.toString.call(value) === '[object Array]') {
-                        if (!value.indexOf(+data)) {
+                        if (!value.indexOf("" + data)) {
                             returnArray.push(key);
                         }
                     } else if (data == key) {
