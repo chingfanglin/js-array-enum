@@ -1,4 +1,21 @@
-module.exports = Array.prototype.getEnumValue = function() {
+// AMD / RequireJS
+if (typeof define !== 'undefined' && define.amd) {
+    define([], function () {
+        return getEnumValue();
+    });
+}
+// Node.js
+else if (typeof module !== 'undefined' && module.exports) {
+    module.exports = getEnumValue();
+}
+// included directly via <script> tag
+else {
+    getEnumValue()
+}
+
+
+function getEnumValue() {
+     Array.prototype.getEnumValue = function() {
     var itemList = [];
     for (var length = arguments.length, arrayList = Array(length), r = 0; r < length; r++) arrayList[r] = arguments[r];
 
@@ -18,8 +35,10 @@ module.exports = Array.prototype.getEnumValue = function() {
                 var value = element[k];
                 itemList.forEach(function(data) {
                     if (Object.prototype.toString.call(value) === '[object Array]') {
-                        if (!value.indexOf("" + data)) {
+                      if (!value.indexOf("" + data)) {
                             returnArray.push(key);
+                        } else if (data  key) {
+                            returnArray.push(value);
                         }
                     } else if (data == key) {
                         returnArray.push(value);
@@ -32,3 +51,4 @@ module.exports = Array.prototype.getEnumValue = function() {
     });
     return returnArray.length > 0 ? returnArray.length == 1 ? returnArray[0] : returnArray : _default;
 };
+}

@@ -1,6 +1,6 @@
 {
   "name": "js-array-enum",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "Convert enum",
   "main": "enum.js",
   "scripts": {
